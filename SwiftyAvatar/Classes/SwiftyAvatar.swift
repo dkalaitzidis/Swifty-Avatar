@@ -22,13 +22,13 @@ import UIKit
         }
     }
     
-    @IBInspectable var borderColor: UIColor = UIColor.clearColor() {
+    @IBInspectable var borderColor: UIColor = UIColor.clear {
         didSet{
             setup()
         }
     }
     
-    @IBInspectable var background: UIColor = UIColor.clearColor() {
+    @IBInspectable var background: UIColor = UIColor.clear {
         didSet{
             setup()
         }
@@ -66,24 +66,24 @@ import UIKit
         
         layer.cornerRadius = bounds.width / roundness
         layer.borderWidth = borderWidth
-        layer.borderColor = borderColor.CGColor
-        layer.backgroundColor = background.CGColor
+        layer.borderColor = borderColor.cgColor
+        layer.backgroundColor = background.cgColor
         clipsToBounds = true
         
         //Code to draw a mask on top of the border to avoid the thin black border line when the avatar's border is on top of a view with the same color as the border.
-        let path = UIBezierPath(roundedRect: CGRectInset(bounds, 0.5, 0.5), cornerRadius: bounds.width / roundness)
+        let path = UIBezierPath(roundedRect: bounds.insetBy(dx: 0.5, dy: 0.5), cornerRadius: bounds.width / roundness)
         let mask = CAShapeLayer()
-        mask.path = path.CGPath
+        mask.path = path.cgPath
         layer.mask = mask
     }
     
     //Spin effect, added for fun!!
     func rotate() {
         let rotation : CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
-        rotation.toValue = NSNumber(double: M_PI * 2)
+        rotation.toValue = NSNumber(value: M_PI * 2)
         rotation.duration = 1
-        rotation.cumulative = true
+        rotation.isCumulative = true
         rotation.repeatCount = spins
-        self.layer.addAnimation(rotation, forKey: "rotationAnimation")
+        self.layer.add(rotation, forKey: "rotationAnimation")
     }
 }

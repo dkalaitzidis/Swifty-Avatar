@@ -1,6 +1,0 @@
-framework module Pods_SwiftyAvatar_Example {
-  umbrella header "Pods-SwiftyAvatar_Example-umbrella.h"
-
-  export *
-  module * { export * }
-}

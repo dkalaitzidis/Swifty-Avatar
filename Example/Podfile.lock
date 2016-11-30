@@ -1,5 +1,5 @@
 PODS:
-  - SwiftyAvatar (0.1.0)
+  - SwiftyAvatar (1.0)
 
 DEPENDENCIES:
   - SwiftyAvatar (from `../`)
@@ -9,6 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SwiftyAvatar: 1fb1b055bf5b1c9931c47fb02d8cd2a1f8d33565
+  SwiftyAvatar: 838e30b2d5ed4067967ca762364cbd21960919c3
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 8da71da97374b1731faef88cb6fc5692711dd90e
+
+COCOAPODS: 1.0.1

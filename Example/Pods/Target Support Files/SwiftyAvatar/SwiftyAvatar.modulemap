@@ -1,6 +1,0 @@
-framework module SwiftyAvatar {
-  umbrella header "SwiftyAvatar-umbrella.h"
-
-  export *
-  module * { export * }
-}
